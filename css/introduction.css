@@ -1,0 +1,41 @@
+#footer {
+    top: 1900px;
+}
+
+.inline {
+    display: inline-block;
+}
+
+.table {
+    width: 600px;
+}
+
+.caputure_area {
+    position: relative;
+    left: 5%;
+    text-align: center;
+    width: 600px;
+}
+
+.caputure_wrapper {
+    position: relative;
+}
+
+.caputure {
+    border: 1px solid gray;
+    margin: 2px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#prev_area {
+    position: absolute;
+    top: 50%;
+    left: -10px;
+}
+
+#next_area {
+    position: absolute;
+    top: 50%;
+    left: 560px;
+}

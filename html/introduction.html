@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>42Chan</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/introduction.css">
+    <link rel="stylesheet" href="../css/static.css">
+    <link rel="shortcut icon" href="../images/favicon.png">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="../js/pagetop.js"></script>
+    <script>
+      $(function() {
+        $("#prev, #next").on("mousemove", function() {
+          $(this).css("cursor", "pointer");
+        });
+
+        $("#next").on("click", function() {
+          var img = $("#caputure");
+          img.attr("src", "../images/caputure_view.png");
+          $("#caputure_message").html("閲覧ページ(※開発中の画面です)");
+          $("#prev").css("display", "block");
+          $("#next").css("display", "none");
+        });
+
+        $("#prev").on("click", function() {
+          var img = $("#caputure");
+          img.attr("src", "../images/caputure_home.png");
+          $("#caputure_message").html("トップページ(※開発中の画面です)");
+          $("#prev").css("display", "none");
+          $("#next").css("display", "block");
+        });
+      });
+    </script>
+  </head>
+
+  <body>
+    <a href="../index.html"><img src="../images/return.png" id="header_return_previous_page"></a> 
+
+    <div class="header">
+      <div>
+        <a href="../index.html"><img src="../images/42chan_logo.png" alt="ロゴ" height="70" width="220"></a>
+      </div>
+    </div>
+
+    <div class="any_area" id="static_main">
+      <h1>ようこそ</h1>
+      <div>
+        <h2>42Channelとは</h2>
+        <div class="any_area sub_area">
+          <p>愛知工業大学 プロジェクト演習2020の準備プロジェクトにおいてA班により作成された、インターネット掲示板集合サイトです。</p>
+          <p>42Channelは、誰でも気軽にスレッドを立て、書き込みを投稿できます。</p>
+          <p>お好きな話題でコミュニケーションを楽しみましょう！</p>
+        </div>
+      </div>
+
+      <h2>42Channelでできること</h2>
+      <div class="any_area sub_area">
+        <p>42Channelでは、次のようなことができます。</p>
+        <span class="inline table">
+          <ol>
+            <li>スレタイ検索</li>
+            <p>検索文字列がスレタイに含まれているスレッドを閲覧することができます！</p>
+            <li>スレッドを立てる</li>
+            <p>お好きな話題で意見交換ができる場を自分の手で作成しましょう！</p>
+            <li>閲覧</li>
+            <p>多くの意見に触れるチャンスです！</p>
+            <li>投稿</li>
+            <p>自分の意見を発信しましょう！</p>
+          </ol>
+        </span>
+
+        <span class="inline caputure_area">
+          <div class="caputure_wrapper">
+            <span class="inline" id="prev_area">
+              <img src="../js/lightbox/images/prev.png" alt="前へ" id="prev" style="display: none;">
+            </span>
+            <img src="../images/caputure_home.png" alt="キャプチャ" width="500px" class="caputure" id="caputure">
+            <span class="inline" id="next_area">
+              <img src="../js/lightbox/images/next.png" alt="後へ" id="next" style="display: block;">
+            </span>
+          </div>
+          <div id="caputure_message">
+            トップページ(※開発中の画面です)
+          </div>
+        </span>
+      </div>
+
+      <br>
+
+      <h1>はじめに</h1>
+      <div>
+        <h2>投稿について</h2>
+        <div class="any_area sub_area">
+          <p>投稿に際して、文面の投稿は無くてはならないものとなっています。</p>
+          <p>また、1つまで画像を添付できます。添付できる画像は<span style="text-decoration: underline;">jpeg,png,gif</span>の3種類となっています。</p>
+        </div>
+      </div>
+
+      <br>
+
+      <div>
+      <h2>注意事項について</h2>
+        <div class="any_area sub_area">
+          <p>はじめに注意事項をよくお読みの上ご利用ください。</p>
+          <p>注意事項は<a href="notes.html">こちら</a></p>
+        </div>
+      </div>
+
+      <br>
+
+      <h1>権利</h1>
+      <div>
+        <h2>lightbox</h2>
+        <div class="any_area sub_area">
+          <p>42Channelは、<a href="http://lokeshdhakar.com/projects/lightbox2/" target="_blank">lightbox</a>を利用しています。</p>
+        </div>
+      </div>
+
+      <h1>お問い合わせ</h1>
+      <p>ご連絡は<span style="text-decoration: underline;">example@email.co.jp</span>までお願いいたします。</p>
+    </div>
+
+    <footer id="footer">
+      <p>42Channelの権利は愛知工業大学プロジェクト演習2020準備プロジェクトA班に帰属します。</p>
+      <a href="../index.html">HOMEへ</a>
+    </footer>
+  </body>
+</html>

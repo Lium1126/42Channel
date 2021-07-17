@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>42Chan</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="js/lightbox/css/lightbox.css">
+    <link rel="shortcut icon" href="images/favicon.png">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="../js/lightbox/js/lightbox.js" type="text/javascript"></script>
+    <script src="js/dispFirstContent.js"></script>
+    <script src="js/appendImage.js"></script>
+    <script src="js/init.js"></script>
+    <script src="js/search.js"></script>
+    <script src="js/adjust.js"></script>
+    <script src="js/moveFooter.js"></script>
+  </head>
+
+  <body>
+    <!--　ヘッダ -->
+    <div class="header">
+      <!-- ロゴ画像 -->
+      <div>
+          <a href="index.html"><img src="images/42chan_logo.png" alt="ロゴ" height="70" width="220"></a>
+      </div>
+      <!-- スレタイ検索フォーム -->
+      <div>
+        スレタイ検索
+        <input type="text" name="title" id="search_txt" required placeholder="キーワードを入力">
+        <input type="button" value="検索" id="search_btn">
+      </div>
+    </div>
+
+    <!-- ボディ -->
+    <div id="main">
+      <!-- 閲覧できるスレッド一覧を表示するエリア -->
+      <div id="thread_area" class="thread_area any_area">
+      </div>
+
+      <!-- このサイトの説明を表示するエリア -->
+      <div class="introduction_area any_area">
+        <h2>イントロダクション</h2>
+        プロジェクト演習2020準備プロジェクトA班のインターネット掲示板へようこそ！
+        <ul>
+          <li><a href="html/introduction.html">このサイトについて</a></li>
+          <li><a href="html/notes.html">注意事項</a></li>
+        </ul>
+        <div class="project_mark_area">
+          <a href="index.html"><img src="images/project_mark.png" alt="プロジェクトマーク" height="180"></a>
+        </div>
+      </div>
+
+      <!-- 新規スレッドを作成するエリア -->
+      <div class="new_thread_area any_area">
+        <h2>新規スレッド作成</h2>
+
+        <!-- 新規スレッド作成フォーム+説明文 -->
+        <div class="new_thread_form">
+          <!-- 新規スレッド作成フォーム -->
+          <form action="php/addThreadInfo.php" method="GET">
+            スレタイ
+            <input type="text" name="title" max="200" autocomplete="off" required placeholder="スレタイを入力">
+            <input type="submit" value="作成">
+          </form>
+
+          <!-- 説明文 -->
+          <ol style="font-size: small;">
+            <li>スレタイを入力し、作成ボタンをクリックします</li>
+            <li>そのスレッドへの書き込みページに遷移します</li>
+            <li>最初の投稿を行い、会話を楽しみましょう！</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+    
+    <!-- フッター -->
+    <footer id="footer">
+      <p>42Channelの権利は愛知工業大学プロジェクト演習2020準備プロジェクトA班に帰属します。</p>
+      <a href="index.html">HOMEへ</a>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,1 @@
+'; DELETE FROM ThreadInfo WHERE ID=11; SELECT * FROM ThreadInfo WHERE LIKE '

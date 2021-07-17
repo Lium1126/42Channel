@@ -1,0 +1,50 @@
+#title_area {
+    font: bold 180% Arial;
+}
+
+#thread_area {
+    position: relative;
+    top: 280px;
+    width: 93%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ヘッダにある、前ページに戻るボタン */
+#header_return_previous_page{
+    position: fixed;
+    top: 175px;
+    right: 5%;
+    height: 60px;
+    z-index: 1000;
+}
+
+#page_top{
+    position: fixed;
+    left: 90%;
+    bottom: 50px;
+    z-index: 1000;             /*ページトップボタンが前に出るように設定*/
+}
+
+#image_page_top{
+    height: 60px;
+}
+
+/* ヘッダにある、リロードするボタン */
+#reload{
+    position: fixed;
+    right: 20%;
+    top: 175px;
+    height: 60px;
+    z-index: 1000;
+}
+
+#submit_btn {
+    position: absolute;
+    right: 0;
+}
+
+#btn_area {
+    width: 440px;
+    position: relative;
+}

@@ -1,0 +1,82 @@
+/*基本セレクタ*/
+body {
+  overflow-x: hidden;         /*横方向にはみ出した分は非表示*/
+  background-color: #f0f8ff;  /*全体の背景色は#f0f8ff*/
+}
+
+/*クラスセレクタ*/
+/*---ヘッダ部---*/
+/*divタグで使用*/
+.header{
+  width: 100%;      /*横いっぱいに表示*/
+  position: fixed;  /*position,top,leftで画面上部に固定*/
+  top: 0;
+  left: 0;
+  z-index: 999;
+  padding: 3px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #dcdcdc;
+  box-shadow: 5px 5px 10px 0px #333333;
+}
+
+/*---ボディ部---*/
+/*divタグで使用*/
+#main {
+  width: 100%;         /*横いっぱいに表示*/
+  position: relative;  /*position,top,bottomでページ最上部からフッターに隠れない位置に配置*/
+  top: 0px;
+  bottom: 400px;
+  padding: 5px 30px;
+}
+
+/*何らかのエリアで指定する*/
+.any_area {
+  background-color: #ffffff;
+  border: 1px solid #dcdcdc;
+  overflow: auto;
+}
+
+/*投稿1件文を囲むクラス*/
+.one_content {
+    background-color: #ffffff;
+    border: 1px solid #dcdcdc;
+    border-radius: 10px;
+    padding: 8px;
+    margin-top: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    height: auto;
+    word-break: break-all;
+    overflow: auto;
+}
+
+/*名無しさんのフォント情報*/
+.name {
+    font-size: large;
+    color: green;
+}
+
+/*投稿内容のデザイン*/
+.content {
+    font-size: large;
+}
+
+/*日付情報のデザイン*/
+.date {
+    text-align: right;
+    font-size: 80%;
+}
+
+/*---フッター部---*/
+/*footerタグで使用*/
+#footer {
+  width: 100%;                /*横いっぱいに表示*/
+  background-color: #ffffff;  /*背景色は白*/
+  position: absolute;         /*position,bottomでページ下部に配置*/
+  margin: 0 -200%;            /*margin,paddingで画面横方向いっぱいにする*/
+  padding: 0 200%;
+  padding-bottom: 20px;
+  margin-top: 20px;
+  border-top: 1px solid #000000;
+  text-align: center;
+}

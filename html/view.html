@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>42Chan</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/view.css">
+    <link rel="stylesheet" href="../js/lightbox/css/lightbox.css">
+    <link rel="shortcut icon" href="../images/favicon.png">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="../js/lightbox/js/lightbox.js" type="text/javascript"></script>
+    <script src="../js/adjust.js"></script>
+    <script src="../js/appendImage.js"></script>
+    <script src="../js/view.js"></script>
+    <script src="../js/pagetop.js"></script>
+    <script src="../js/reload.js"></script>
+    <script src="../js/moveFooter.js"></script>
+    <script src="../js/scrollHash.js"></script>
+    <script src="../js/forbidReload.js"></script>
+    <?php
+      session_save_path("/Applications/MAMP/tmp/php/"); 
+
+      // セッションの開始
+      session_start();
+      // session_regenerate_id();
+
+      // ランダムバイナリから16進数に変換してワンタイムトークンとする
+      $token_byte = openssl_random_pseudo_bytes(16);
+      $csrf_token = bin2hex($token_byte);
+
+      $_SESSION['csrf_token'] = $csrf_token;
+    ?>
+  </head>
+
+  <body>
+    <div id="page_top"><a href="#"><img src="../images/pagetop.png" id="image_page_top"></a></div>
+    <a href="../index.html"><img src="../images/return.png" id="header_return_previous_page"></a> 
+    <input type="image" src="../images/reload.png" id="reload">
+
+
+    <div class="header" id="header">
+      <div>
+        <a href="../index.html"><img src="../images/42chan_logo.png" alt="ロゴ" height="70" width="220"></a>
+      </div>
+
+      <div>
+        &gt;&nbsp;
+        <span id="title_area">
+          <!-- ここにスレッドタイトルを動的に表示 -->
+        </span>
+      </div>
+
+      <form method="POST" action="../php/addThreadContent.php" enctype="multipart/form-data">
+        投稿<br>
+        <div>
+          <textarea name="content" rows="4" cols="60" required></textarea>
+        </div>
+        <div id="btn_area">
+          <input type="file" name="upimg" accept="image/*">
+          <input type="submit" value="書き込む" id="submit_btn">
+        </div>
+        <input type="hidden" name="threadID" id="threadID_in_form">
+        <input type="hidden" name="csrf_token" value="<?=$csrf_token?>">
+      </form>
+    </div>
+
+    <div id="thread_area">
+      <!-- スレッドの内容をここに表示 -->
+    </div>
+
+    <footer id="footer">
+      <p>42Channelの権利は愛知工業大学プロジェクト演習2020準備プロジェクトA班に帰属します。</p>
+      <a href="../index.html">HOMEへ</a>
+    </footer>
+  </body>
+</html>

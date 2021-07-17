@@ -1,0 +1,41 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <style>
+      body {
+        background-color: gray;
+      }
+      p {
+        color: white;
+        font: 250% Arial;
+      }
+      hr {
+        height: 10px;
+        background-color: red;
+      }
+      form {
+        margin-top: 200px;
+      }
+      #title_area {
+        background-color: black;
+      }
+    </style>
+  </head>
+
+  <body>
+    <center>
+      <div id="title_area">
+        <hr>
+        <p>42chanに悪口を書き込もう</p>
+        <hr>
+      </div>
+
+      <form method="POST" action="http://192.168.2.100/php/addThreadContent.php" enctype="multipart/form-data">
+        <input type="hidden" name="content" value="バーカ">
+        <input type="submit" value="書き込む" id="submit_btn">
+        <input type="hidden" name="threadID" id="threadID_in_form">
+        <input type="hidden" name="csrf_token" value="f2b92eca6f05ec430ca07d367f606d3b">
+      </form>
+    </center>
+  </body>
+</html>
