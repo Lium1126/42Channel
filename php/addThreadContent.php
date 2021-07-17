@@ -14,8 +14,8 @@
 
     // データベースに接続
     try{
-        $pdo=new PDO('mysql:host=localhost;dbname=BBS;charset=utf8',
-                'staff','password');
+        $pdo=new PDO('mysql:host=[ホスト];dbname=[DB名];charset=utf8',
+                '[ユーザー名]','[パスワード]');
     }catch(Exception $e){
         /*接続に失敗*/
         die('データベースに接続できませんでした');
